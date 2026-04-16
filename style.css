@@ -6,6 +6,17 @@
     --text-color: #333;
     --container-background: #ffffff;
     --button-hover-color: #2980b9;
+    --toggle-bg: #ccc;
+}
+
+[data-theme="dark"] {
+    --primary-color: #5dade2;
+    --secondary-color: #58d68d;
+    --background-color: #1a1a1a;
+    --text-color: #f0f2f5;
+    --container-background: #2d2d2d;
+    --button-hover-color: #3498db;
+    --toggle-bg: #444;
 }
 
 body {
@@ -17,6 +28,24 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#theme-button {
+    background-color: var(--toggle-bg);
+    color: var(--text-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.3s;
 }
 
 .container {
